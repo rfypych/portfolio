@@ -9,4 +9,5 @@ export const links = {
   github: "https://github.com/rfypych",
   twitter: "https://instagram.com/rfikl_",
   telegram: "https://t.me/rfyycrnge",
+  linkedin: "https://www.linkedin.com/in/rofikulhuda/",
 };
