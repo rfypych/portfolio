@@ -88,7 +88,7 @@ export default function GsapPageTransition() {
 
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
-  }, [router]);
+  }, [router, dispatch]);
 
   useEffect(() => {
     const overlay = overlayRef.current;
@@ -117,7 +117,7 @@ export default function GsapPageTransition() {
       });
     };
     requestAnimationFrame(run);
-  }, [pathname]);
+  }, [pathname, dispatch]);
 
   return (
     <div
