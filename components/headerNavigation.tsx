@@ -82,13 +82,10 @@ export function HeaderNavigation() {
       href: links.work,
     },
     {
-<<<<<<< HEAD
       name: "Certificates",
       href: links.certificates,
     },
     {
-=======
->>>>>>> 9ae00bf973099eeef60a1339696b52cc754b1153
       name: "Contact",
       href: links.email,
     },
