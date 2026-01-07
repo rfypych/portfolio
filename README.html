@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Portfolio Website with GSAP Animations &lpar;Next&period;js&rpar;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="portfolio-website-with-gsap-animations-nextjs">Portfolio Website with GSAP Animations (Next.js)</h1>
+<h2 id="ringkasan">Ringkasan</h2>
+<blockquote>
+<p>Catatan: Proyek ini dibuat untuk tujuan pembelajaran/portofolio. Mohon tidak menyalin tanpa izin.</p>
+</blockquote>
+<p>Repo ini berisi kode sumber website portofolio modern yang dibangun dengan Next.js 14 (App Router), GSAP untuk animasi halus, dan Tailwind CSS untuk styling. Proyek memprioritaskan UX yang lembut, transisi halaman yang rapi, dan struktur komponen yang mudah dikembangkan.</p>
+<h2 id="demo">Demo</h2>
+<ul>
+<li>Live: (tambahkan URL deploy Vercel di sini)</li>
+<li>Lokal: <a href="http://localhost:3000">http://localhost:3000</a> (lihat cara menjalankan di bawah)</li>
+</ul>
+<h2 id="fitur-utama">Fitur Utama</h2>
+<ul>
+<li>Animasi GSAP menyeluruh (hover, marquee, dan transisi halaman overlay yang menutup sebelum navigasi dan membuka setelah halaman tujuan siap).</li>
+<li>Next.js 14 App Router dengan struktur modular dan performa tinggi.</li>
+<li>Tailwind CSS (utility-first) + konfigurasi font (DM Sans + font lokal).</li>
+<li>Manajemen state menu dengan Redux Toolkit (auto-close navbar saat transisi).</li>
+<li>Komponen UI reusable dan tersegmentasi (hero, about, contact, work, dsb.).</li>
+<li>Optimasi gambar dengan next/image, aset SVG &amp; ikon yang terorganisir.</li>
+<li>Responsif dan mudah dikustomisasi.</li>
+</ul>
+<h2 id="teknologi">Teknologi</h2>
+<ul>
+<li>Next.js 14, React 18, TypeScript 5</li>
+<li>GSAP 3 (CustomEase, animasi overlay transisi halaman)</li>
+<li>Tailwind CSS 3, PostCSS, Autoprefixer</li>
+<li>Redux Toolkit 2 + React Redux 9</li>
+<li>Swiper 11, Lottie (opsional pada beberapa komponen)</li>
+<li>Lainnya: clsx/tailwind-merge, lucide-react, split-type, dll.</li>
+</ul>
+<h2 id="struktur-proyek-ringkas">Struktur Proyek (ringkas)</h2>
+<pre><code>.
+├─ app/
+│  ├─ layout.tsx              # Root layout &amp; font, global providers
+│  ├─ globals.css             # Global styles
+│  └─ work/                   # Halaman portofolio proyek
+├─ components/
+│  ├─ header.tsx              # Header + tombol menu
+│  ├─ headerNavigation.tsx    # Overlay menu navigasi (Redux)
+│  ├─ heroSection/            # Hero
+│  ├─ aboutSection/           # About + marquee
+│  ├─ contactSection/         # Contact + background logo animasi
+│  └─ ui/
+│     └─ GsapPageTransition.tsx # Overlay transisi halaman (GSAP)
+├─ data/                      # Link &amp; data statis (social, dsb.)
+├─ lib/                       # Utilitas (helper)
+├─ public/
+│  ├─ img/projects/           # Gambar proyek (1.png, 2.png, ...)
+│  └─ svg_logo/               # Logo-logo SVG untuk background
+├─ redux/
+│  └─ states/menuSlice.ts     # isMenuOpen + color
+├─ tailwind.config.ts         # Konfigurasi Tailwind
+├─ next.config.js             # Konfigurasi Next.js
+├─ package.json               # Script &amp; dependensi
+└─ tsconfig.json              # Konfigurasi TypeScript
+</code></pre>
+<h2 id="menjalankan-secara-lokal">Menjalankan Secara Lokal</h2>
+<p>Prasyarat:</p>
+<ul>
+<li>Node.js 18+ (disarankan LTS)</li>
+<li>Yarn atau npm</li>
+</ul>
+<p>Langkah:</p>
+<pre><code class="language-bash"><span class="hljs-comment"># 1) Instal dependensi</span>
+yarn install
+
+<span class="hljs-comment"># 2) Jalankan development server</span>
+yarn dev
+<span class="hljs-comment"># Buka http://localhost:3000</span>
+
+<span class="hljs-comment"># 3) Build untuk production</span>
+yarn build
+
+<span class="hljs-comment"># 4) Menjalankan build production</span>
+yarn start
+
+<span class="hljs-comment"># Opsional: cek lint</span>
+yarn lint
+</code></pre>
+<h2 id="kustomisasi-cepat">Kustomisasi Cepat</h2>
+<ul>
+<li>Tautan &amp; Kontak: edit <code>data/data.ts</code> (email, Telegram, GitHub, Instagram, dsb.).</li>
+<li>Proyek pada halaman Work: edit <code>app/work/page.tsx</code> (<code>projectsData</code>) dan taruh gambar di <code>public/img/projects/</code> dengan format <code>1.png</code>, <code>2.png</code>, dst.</li>
+<li>Logo background Contact: tambah/hapus SVG di <code>public/svg_logo/</code>, lalu sesuaikan daftar di <code>components/contactSection/bgImagesContainer.tsx</code>.</li>
+<li>Transisi Halaman (GSAP): ubah durasi/ease di <code>components/ui/GsapPageTransition.tsx</code>.</li>
+<li>Font &amp; tema: DM Sans &amp; font lokal di <code>app/layout.tsx</code>; variabel CSS warna diatur melalui animasi pada beberapa komponen (mis. About/CTA).</li>
+</ul>
+<h2 id="deployment-vercel-direkomendasikan">Deployment (Vercel direkomendasikan)</h2>
+<ul>
+<li>Push repo ke GitHub, impor ke Vercel, framework: Next.js (auto-detect).</li>
+<li>Build command: <code>next build</code></li>
+<li>Output: <code>.next</code></li>
+<li>Variabel lingkungan (jika diperlukan) dapat ditambahkan via Project Settings di Vercel.</li>
+</ul>
+<h2 id="skrip-packagejson">Skrip (package.json)</h2>
+<ul>
+<li><code>yarn dev</code> — menjalankan server pengembangan</li>
+<li><code>yarn build</code> — build production</li>
+<li><code>yarn start</code> — menjalankan hasil build</li>
+<li><code>yarn lint</code> — menjalankan linter</li>
+</ul>
+<h2 id="lisensi">Lisensi</h2>
+<p>Proyek ini ditujukan untuk pembelajaran/portofolio pribadi. Mohon tidak menyalin ulang secara penuh tanpa izin penulis.</p>
+<h2 id="kredit">Kredit</h2>
+<p>Dikembangkan dengan Next.js, GSAP, dan Tailwind CSS. Terima kasih untuk seluruh pustaka open-source yang digunakan.</p>
+
+            
+            
+        </body>
+        </html>
