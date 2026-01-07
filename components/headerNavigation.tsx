@@ -82,10 +82,13 @@ export function HeaderNavigation() {
       href: links.work,
     },
     {
+<<<<<<< HEAD
       name: "Certificates",
       href: links.certificates,
     },
     {
+=======
+>>>>>>> 9ae00bf973099eeef60a1339696b52cc754b1153
       name: "Contact",
       href: links.email,
     },
@@ -110,6 +113,7 @@ export function HeaderNavigation() {
             {headerData.map((data) => (
               <li className="headerAnimate" key={data.name}>
                 <Magentic
+
                   className={`text-[clamp(32px,_3.3vw_+_32px,_88px)] font-bold text-color${color == "Light" ? "Dark" : "Light"
                     }`}
                   scrambleParams={{
@@ -127,6 +131,7 @@ export function HeaderNavigation() {
 
         <div className="absolute left-0 top-0 -z-40 flex h-full w-full flex-col ">
           <div
+
             className={`${color == "Light" ? "lightGradient" : "darkGradient"
               } h-full w-full grow `}
           ></div>
