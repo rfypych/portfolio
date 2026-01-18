@@ -3,6 +3,7 @@ import Magentic from "@/components/ui/magentic";
 import { Header } from "@/components/header";
 import { Bulge } from "../bulge";
 import { cn } from "@/lib/utils";
+
 export function WorkSection({
   index,
   item,
@@ -19,6 +20,9 @@ export function WorkSection({
   color: "Dark" | "Light";
   length: number;
 }) {
+  // Check if link is external (starts with http) or internal (starts with /)
+  const isExternalLink = item.link.startsWith("http");
+
   const possibleTailwindClasses = [
     "text-colorDark",
     "text-colorLight",
@@ -30,9 +34,8 @@ export function WorkSection({
 
   return (
     <div
-      className={`section s${index} ${
-        color == "Dark" ? "lightGradient" : "darkGradient"
-      }
+      className={`section s${index} ${color == "Dark" ? "lightGradient" : "darkGradient"
+        }
       text-color${color} `}
       key={item.link}
     >
@@ -45,10 +48,9 @@ export function WorkSection({
           `}
         >
           <a
-            className={`image image--works image--works${
-              index + 1
-            } anime rounded-3xl `}
-            target="_blank"
+            className={`image image--works image--works${index + 1
+              } anime rounded-3xl `}
+            target={isExternalLink ? "_blank" : undefined}
             href={item.link}
             style={{
               background: `url(${item.imageLink}) center center / contain no-repeat`,
@@ -76,21 +78,19 @@ export function WorkSection({
             <div className="btn-wrap js-letter anime">
               <Magentic
                 strength={50}
-                className={`btn text-color${
-                  color === "Dark" ? "Light" : "Dark"
-                } bg-color${color} mask`}
+                className={`btn group text-color${color === "Dark" ? "Light" : "Dark"
+                  } bg-color${color} mask flex items-center justify-center`}
                 href={item.link}
-                target="_blank"
+                target={isExternalLink ? "_blank" : undefined}
                 scrambleParams={{ text: "Show Me", chars: "-x" }}
               >
-                <p className="shapka">
+                <p className="shapka !flex items-center gap-2">
                   <span className="scrambleText">Show Me</span>
                   <svg
-                    className="ml-4 inline w-[0.8em] -rotate-[75deg] text-inherit" // width="34px"
-                    // height="34px"
+                    className="w-[0.8em] -rotate-[75deg] text-inherit transition-transform duration-300 group-hover:rotate-0"
                     viewBox="0 0 14 14"
                     version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" // xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <title>arrow-up-right</title>
                     <g

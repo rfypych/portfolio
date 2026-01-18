@@ -43,7 +43,7 @@ export function CertificateSection({
                 <div className="mx-auto max-w-maxWidth w-full flex flex-col md:flex-row gap-8 md:gap-20 items-center justify-center h-full md:h-auto">
 
                     {/* Left/Top: Text Content */}
-                    <div className="w-full md:w-1/2 flex flex-col items-start justify-center order-2 md:order-1">
+                    <div className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center order-2 md:order-1 text-center md:text-left">
                         <div className="page-num mb-4 md:mb-6">
                             <p className={`text-xs md:text-base font-medium tracking-widest uppercase opacity-70 border-b pb-2 ${color === "Dark" ? "border-colorDark" : "border-colorLight"
                                 }`}>

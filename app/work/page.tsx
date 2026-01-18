@@ -11,12 +11,52 @@ const projectsData = [
   {
     title: (
       <>
-        Project <br /> Ephemeris 
+        P2P <br /> AirNode
+      </>
+    ),
+    description: "Secure P2P File Share. Transfer files instantly between devices.",
+    link: "https://p2pairnode.vercel.app/",
+    imageLink: "/img/projects/p2pairnode.png",
+  },
+  {
+    title: (
+      <>
+        MulyoNode <br /> (Dynasty)
+      </>
+    ),
+    description: "Satirical runtime parodying political architecture & nepotism",
+    link: "https://rfypych.github.io/MulyoNode/",
+    imageLink: "/img/projects/mulyonode.png",
+  },
+  {
+    title: (
+      <>
+        Todatas <br /> Community
+      </>
+    ),
+    description: "Minecraft clan website with Lore, Gallery, and Member roster",
+    link: "https://todatas.vercel.app/",
+    imageLink: "/img/projects/todatas.png",
+  },
+  {
+    title: (
+      <>
+        SkyMind <br /> Weather AI
+      </>
+    ),
+    description: "AI-powered weather intelligence using Google GenAI & Leaflet",
+    link: "https://skymind-weather.vercel.app/",
+    imageLink: "/img/projects/skymind.png",
+  },
+  {
+    title: (
+      <>
+        Project <br /> Ephemeris
       </>
     ),
     description: "Conversational AI powered by NASA & Mistral APIs",
     link: "https://ephemeris-pi.vercel.app/",
-    imageLink: "/img/projects/1.png",
+    imageLink: "/img/projects/ephemeris.png",
   },
   {
     title: (
@@ -26,17 +66,7 @@ const projectsData = [
     ),
     description: "An AI-Powered, Multi-Backend Text RPG",
     link: "https://llm-text-rpg.vercel.app/",
-    imageLink: "/img/projects/2.png",
-  },
-  {
-    title: (
-      <>
-        X TKJ <br /> Axioo
-      </>
-    ),
-    description: "Static Website for Class Information",
-    link: "https://rfypych.github.io/xtkjaxioo/",
-    imageLink: "/img/projects/3.png",
+    imageLink: "/img/projects/neuralodyssey.png",
   },
   {
     title: (
@@ -46,9 +76,8 @@ const projectsData = [
     ),
     description: "Orchestrates AI models for automation and creativity",
     link: "https://orchestra-ai.vercel.app/",
-    imageLink: "/img/projects/4.png",
+    imageLink: "/img/projects/orchestra.png",
   },
-
   {
     title: (
       <>
@@ -56,18 +85,8 @@ const projectsData = [
       </>
     ),
     description: "Real-Time Violation Detection using YOLO",
-    link: "https://inovasi-grisa.my.canva.site/safe-t/",
-    imageLink: "/img/projects/5.png",
-  },
-  {
-    title: (
-      <>
-        Project <br /> Listify
-      </>
-    ),
-    description: "To‑do and Pomodoro timer in one app",
-    link: "https://listify-rfiklz.vercel.app/",
-    imageLink: "/img/projects/6.png",
+    link: "/work/safet",
+    imageLink: "/img/projects/safet.png",
   },
 ];
 //test

@@ -11,23 +11,25 @@ interface MagenticProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   hoverUnderline?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   scrambleParams?:
-    | {
-        text: string;
-        chars?: string;
-        speed?: number;
-      }
-    | {
-        text: string;
-        chars?: string;
-        speed?: number;
-      }[];
+  | {
+    text: string;
+    chars?: string;
+    speed?: number;
+  }
+  | {
+    text: string;
+    chars?: string;
+    speed?: number;
+  }[];
 }
 const Magentic = ({
   children,
   className,
   onMouseEnter,
   onMouseLeave,
+  onClick,
   scrambleParams,
   hoverUnderline = false,
   strength = 100,
@@ -115,10 +117,10 @@ const Magentic = ({
       ref={magnet}
       className={cn(
         "flex justify-center *:pointer-events-none  " +
-          (hoverUnderline
-            ? " before:absolute before:bottom-0 before:h-0.5 before:w-0 before:origin-center before:bg-[#a3a3a3] before:transition-all before:duration-300 hover:before:w-full "
-            : " ") +
-          className,
+        (hoverUnderline
+          ? " before:absolute before:bottom-0 before:h-0.5 before:w-0 before:origin-center before:bg-[#a3a3a3] before:transition-all before:duration-300 hover:before:w-full "
+          : " ") +
+        className,
       )}
       onMouseEnter={() => {
         if (scrambleParams) {
@@ -146,6 +148,7 @@ const Magentic = ({
         onMouseEnter?.();
       }}
       onMouseLeave={onMouseLeave}
+      onClick={onClick}
       {...rest}
     >
       {children}
