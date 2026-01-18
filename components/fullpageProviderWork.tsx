@@ -21,7 +21,7 @@ const opts = {
   navigationPosition: "left",
   scrollingSpeed: 1300,
   easingcss3: "cubic-bezier(.70,0,.30,1)",
-  anchors: ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth"],
+  // anchors removed to prevent hash conflicts with Next.js routing
   licenseKey: "gplv3-license",
   credits: {
     enabled: false,
